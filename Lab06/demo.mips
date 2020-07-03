@@ -1,0 +1,11 @@
+lw $1,4($0)
+lw $2,8($0)
+j 7 # 2 nops are needed to prevent control hazard
+nop
+nop
+lw $17,0($0)
+lw $18,0($0)
+lw $4,0($0)
+lw $5,0($0)
+sll $5,$1,5
+sub $4,$1,$2
